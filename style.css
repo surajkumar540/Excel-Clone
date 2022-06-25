@@ -1,0 +1,204 @@
+:root{
+    --border-color:lightgrey;
+    --cell-background:whitesmoke;
+}
+*{
+    margin: 0px;   
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.88rem;
+}
+.title-bar{
+    height: 40px;
+    background-color: darkgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-bar>.fa-file-excel{
+    color: white;
+    display: flex;
+}
+.fa-file-excel h2{
+    align-items: center;
+    display: flex;
+    padding-left: 8px; 
+    padding-top: 12px;
+    font-size: 0.85rem;
+}
+.menu-options{
+    border-bottom: 0.5px var(--border-color);
+    height: 35px;
+    display: flex;
+    background-color:var(--cell-background);
+
+}
+
+.address-content{
+    /* border: 0.5px solid; */
+    height: 24px;
+    display: flex;
+}
+
+.cells-content{
+    height:80vh;
+    border: 0.5px solid var(--border-color);
+    overflow: auto;
+    position: relative;
+}
+.sheets{
+    border-bottom: 0.1px solid var(--border-color);
+    height: 30px;
+    display: flex;
+}
+.row{
+    display: flex;
+}
+.cell{
+    border-left: 0.1px solid var(--border-color);
+    border-bottom: 0.1px solid var(--border-color) ;
+    min-height: 25px;
+    width: 100px;
+    outline: none;
+}
+.top-left-cell{
+    border-right: 0.1px solid var(--border-color);
+    border-bottom: 0.1px solid var(--border-color);
+    height: 25px;
+    width: 40px;
+    background-color: var(--cell-background);
+    position: absolute;
+    z-index: 2;
+}
+
+.top-row{
+    display: flex;
+    position: absolute;
+    background-color:var(--border-color);
+    left: 40px;
+    z-index: 1;
+}
+
+.top-row-cell{
+    height: 25px;
+    width: 100px;
+    border-bottom: 0.1px solid var(--border-color);
+    border-left: 0.1px solid var(--border-color);
+    display: flex;
+    background-color: var(--cell-background);
+    justify-content: center;
+    align-items: center;
+}
+
+.left-col{
+    background-color: var(--cell-background);
+    position: absolute;
+    left: 0px;
+    top:25px;
+    z-index: 1;
+}
+
+.left-col-cell{
+    height: 25px;
+    width: 40px;
+    border-bottom: 0.1px solid var(--border-color);
+    /* border-right: 0.1px solid var(--border-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cells{
+    position: absolute;
+    top:25px;
+    left:40px;
+}
+#address{
+    text-align: center;
+    width: 80px;
+    border: none;
+    border-top: 0.5px solid var(--border-color);
+}
+#formula{
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    border: 0.5px solid var(--border-color);
+}
+.sheets-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-right: 00.5px solid var(--border-color); */
+    /* background-color: var(--border-color); */
+}
+.add-sheet{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: dark;
+    border-right: 0.1px solid var(--border-color);
+    
+}
+.add-sheet i:hover{
+    color: green;
+    font-size: 1.2rem
+}
+.sheet{
+    border-right: 0.1px solid var(--border-color);
+    width: 90px;;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sheet:hover{
+    background-color: lightgrey;
+}
+.active-sheet:hover{
+    background-color: white;
+}
+.active-sheet{
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: green;
+}
+.font-style{
+    display: flex;
+    width: 15rem;
+    height: 100%;
+    justify-content: space-around;
+    align-items:flex-end;
+    padding-bottom: 5px;
+    border-right: 1px solid var(--border-color);
+}
+.font-style div{
+    /* background-color: red; */
+    cursor: pointer;
+    height: 80%;
+    width: 35px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.font-style div:hover{
+    background-color: var(--border-color);
+    border-radius: 5px;
+    opacity: 0.7;
+}
+.active-font-style{
+    background-color: var(--border-color);
+    opacity: 0.8;
+    border-radius: 5px;
+}
+.active-cell{
+    border: 2px solid green;
+    border-radius: 2px;
+}
+.active-row-col{
+    background-color: var(--border-color); 
+}

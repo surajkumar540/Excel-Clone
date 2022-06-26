@@ -2,7 +2,7 @@
 let bold = document.querySelector(".bold");
 let italic = document.querySelector(".italic");
 let underline = document.querySelector(".underline");
-
+const select = document.querySelectorAll('select');
 
 //BOLD, ITALIC AND UNDERLINE
 bold.addEventListener("click",function()
@@ -19,6 +19,33 @@ underline.addEventListener("click",function()
 {
     setFontStyle("underline",underline);
 })
+
+
+
+
+for(let i = 0; i<select.length; i++){
+    select[i].addEventListener('change',(e)=>{
+        console.log(e.target.value);
+        setFontOption(e.target,e.target.value);
+    })
+}
+
+
+
+function setFontOption(element,fontOption){
+    if(lastSelectedCell){
+        const {rowId,colId} = getRowIdColIdFromElement(lastSelectedCell);
+        const cellObject = db[rowId][colId];
+        if(element.id == 'font-family'){
+            lastSelectedCell.style.fontFamily = fontOption;
+            cellObject.fontOption.fontFamily = fontOption;
+        }else{
+            lastSelectedCell.style.fontSize = fontOption + "px";
+            cellObject.fontOption.fontSize = fontOption;
+        }
+    }
+}
+
 
 
 //BOLD, ITALIC AND UNDERLINE

@@ -32,8 +32,36 @@
     height: 35px;
     display: flex;
     background-color:var(--cell-background);
+}
+
+.font-option{
+    width: 300px;
+  }
+.font-option div{
+    border: 0.1px solid;
+    width: 100%;
 
 }
+  
+select{
+    height: 55%;
+    font-size: 12px;
+    outline: none;
+    border-radius: 5px;
+}
+  
+#font-family{
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 20px;  
+
+}
+  
+  #font-size{
+    width: 15%;
+    margin-right: 20px;
+
+  }
 
 .address-content{
     /* border: 0.5px solid; */

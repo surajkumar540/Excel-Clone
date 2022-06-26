@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <div class="title-bar">
@@ -22,8 +22,25 @@
             <div class="italic"><i class="fa fa-italic"></i></div>
             <div class="underline"><i class="fa fa-underline"></i></div>
         </div>
+
+    <div class="font-option">
+        <select id="font-family">
+            <option value="sans-serif" style="font-family:sans-serif;">Sans Serif</option>
+            <option value="roboto" style="font-family:roboto;">Roboto</option>
+            <option value="impact" style="font-family:impact;">Impact</option>
+            <option value="arial" style="font-family:arial;">Arial</option>
+            <option value="rockwell" style="font-family:rockwell;">Rockwell</option>
+            <option value="monospace" style="font-family:monospace;">Monospace</option>
+        </div>
+        </select>
+        <select id="font-size">
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+        </select>
     </div>
-    
+    </div>
     <div class="address-content">
         <input type="text" id="address" disabled>
         <input type="text" id="formula" placeholder="fx">

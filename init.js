@@ -52,6 +52,10 @@ function initDb(){
                     italic:false,
                     underline:false
                 },
+                fontOption:{
+                    fontFamily:"sans-serif",
+                    fontSize:"13"
+                }
             }
             row.push(cellObject);
         }

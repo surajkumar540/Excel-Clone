@@ -2,7 +2,7 @@
 let bold = document.querySelector(".bold");
 let italic = document.querySelector(".italic");
 let underline = document.querySelector(".underline");
-const select = document.querySelectorAll('select');
+let select = document.querySelectorAll('select');
 
 //BOLD, ITALIC AND UNDERLINE
 bold.addEventListener("click",function()
@@ -30,6 +30,28 @@ for(let i = 0; i<select.length; i++){
     })
 }
 
+
+let inputColorOptions = document.querySelectorAll('input[type="color"]');
+for(let i = 0; i<inputColorOptions.length; i++){
+    inputColorOptions[i].addEventListener('blur',(e)=>{
+        console.log(e.target.value);
+        setColorOption(e.target,e.target.value);
+    })
+}
+
+function setColorOption(element,colorOption){
+    if(lastSelectedCell){
+        const {rowId,colId} = getRowIdColIdFromElement(lastSelectedCell);
+        const cellObject = db[rowId][colId];
+        if(element.id == 'text-color-palette'){
+            lastSelectedCell.style.color = colorOption;
+            cellObject.textColor = colorOption;
+        }else{
+            lastSelectedCell.style.backgroundColor = colorOption;
+            cellObject.backgroundColor = colorOption;
+        }
+    }
+}
 
 
 function setFontOption(element,fontOption){
